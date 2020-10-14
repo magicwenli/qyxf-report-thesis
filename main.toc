@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {\S 1}实验目的}{2}{section.1}% 
+\contentsline {section}{\numberline {\S 2}实验内容}{2}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}语音信号的采集}{2}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}语音信号的预处理}{3}{subsection.2.2}% 
+\contentsline {subsection}{\numberline {2.3}语音信号的短时时域分析}{4}{subsection.2.3}% 
+\contentsline {subsubsection}{\numberline {2.3.1}时域特征的提取}{4}{subsubsection.2.3.1}% 
+\contentsline {subsubsection}{\numberline {2.3.2}端点检测：双门限方法}{5}{subsubsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.4}分类算法}{5}{subsection.2.4}% 
+\contentsline {subsubsection}{\numberline {2.4.1}决策树}{5}{subsubsection.2.4.1}% 
+\contentsline {subsubsection}{\numberline {2.4.2}SVM}{6}{subsubsection.2.4.2}% 
+\contentsline {subsection}{\numberline {2.5}多分类}{6}{subsection.2.5}% 
+\contentsline {subsubsection}{\numberline {2.5.1}ovo}{6}{subsubsection.2.5.1}% 
+\contentsline {subsubsection}{\numberline {2.5.2}ovr}{6}{subsubsection.2.5.2}% 
+\contentsline {section}{\numberline {\S 3}实验效果比较}{7}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}实验参数分析}{7}{subsection.3.1}% 
+\contentsline {subsubsection}{\numberline {3.1.1}帧率的影响}{7}{subsubsection.3.1.1}% 
+\contentsline {subsubsection}{\numberline {3.1.2}分类器个数的影响}{7}{subsubsection.3.1.2}% 
+\contentsline {subsection}{\numberline {3.2}时域聚类分析}{7}{subsection.3.2}% 
+\contentsline {section}{\numberline {\S 4}流程详述}{8}{section.4}% 
+\contentsline {section}{\numberline {\S 5}附录：相关代码}{9}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}数据预处理、时域特征的提取}{9}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}分类算法部分}{9}{subsection.5.2}% 

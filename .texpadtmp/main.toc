@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {\S 1}实验目的}{2}{section.1}% 
+\contentsline {section}{\numberline {\S 2}实验内容}{2}{section.2}% 
+\contentsline {section}{\numberline {\S 3}实验要求}{2}{section.3}% 
+\contentsline {section}{\numberline {\S 4}实验代码及结果}{3}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}模块的电路图}{3}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}分析电路的仿真波形}{3}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.3}实验设计和调试过程}{3}{subsection.4.3}% 
+\contentsline {section}{\numberline {\S 5}调试和心得体会}{3}{section.5}% 

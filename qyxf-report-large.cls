@@ -69,8 +69,8 @@
 \if@sourcefont
   \RequirePackage[SlantFont]{xeCJK}
   \RequirePackage[heading]{ctex}
-  \setCJKmainfont{思源宋体}
-  \setCJKsansfont{思源黑体}
+  \setCJKmainfont{思源宋体 CN}
+  \setCJKsansfont{思源黑体 CN}
 \else
   \RequirePackage[heading]{ctex}
 \fi
@@ -121,22 +121,29 @@
 % 页眉页脚
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
-\lhead{}
-\rhead{}
-\chead{\fangsong \@title} 
-\rfoot{\thepage} 
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[RO] {\thepage}
+\fancyhead[LO] {\footnotesize{\makeatletter\the\subtitle\makeatother}}
+\fancyfoot[LO] {\footnotesize{\@title}}
+\fancyfoot[RO] {\footnotesize{\makeatletter\@author\makeatother}}
+%\chead{\fangsong \@title} 
+%\rfoot{\thepage} 
 %\fancyhead[OC]{\fangsong\nouppercase\rightmark}
-\cfoot{\resizebox{0.2\linewidth}{1.5ex}{%
-\pgfornamenthan[scale=0.05]{58}}}
-\fancypagestyle{plain}{%
-\fancyhf{}
-\fancyfoot[C]{\\\resizebox{0.2\linewidth}{1.5ex}{%
-\pgfornamenthan[scale=0.05]{58}}}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-}
+%\cfoot{\resizebox{0.2\linewidth}{1.5ex}{%
+%\pgfornamenthan[scale=0.05]{58}}}
+%\fancypagestyle{plain}{%
+%\fancyhf{}
+%\fancyfoot[C]{\\\resizebox{0.2\linewidth}{1.5ex}{%
+%\pgfornamenthan[scale=0.05]{58}}}
+%}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
 \setlength{\headheight}{13pt}
 
+%class，id
+\newcommand\class[1]{\newcommand{\classloc}{#1}}
+\newcommand\id[1]{\newcommand{\idloc}{#1}}
 
 % 封面页
 \renewcommand*{\maketitle}{%
@@ -149,18 +156,21 @@ left=20pt]
 {\fontsize{40pt}{\baselineskip}\selectfont\bfseries\@title}\\[0.5\baselineskip]
 {\Huge\itshape\the\subtitle}
 \end{tcolorbox}
+\vspace{3cm}
 \begin{tcolorbox}[blanker,borderline west={1mm}{0pt}{black!50},%
 left=20pt]
-{\Large \@author  \\[0.2\baselineskip]
+{\Large \classloc \\[0.2\baselineskip]
+\@author  \\[0.2\baselineskip]
+\idloc  \\[0.2\baselineskip]
 \@date}
 \end{tcolorbox}
 \vfill
-\textsc{Xi'an Jiaotong University}
+\textsc{Xi'an Jiaotong University\\ Computer Science and Technology}
 \end{center}
 \begin{tikzpicture}[remember picture, overlay]
   \begin{pgfonlayer}{background}
   \node at ($(current page.east) +(0in,0in)$) {%
-  \includegraphics[width=0.8\textwidth]{cover.png}};
+  \includegraphics[width=0.85\textwidth]{cover.png}};
   \end{pgfonlayer}
 \end{tikzpicture}
 \end{titlepage}
@@ -179,6 +189,7 @@ left=20pt]
 \pagestyle{fancy}
 \setcounter{page}{1}
 \vfill
+\newpage
 }
 
 \endinput
