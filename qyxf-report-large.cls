@@ -110,12 +110,38 @@
    
 % codes
 \usepackage{listings}
-
+\colorlet{mygray}{black!30}
+\colorlet{mygreen}{green!60!blue}
+\colorlet{mymauve}{red!60!blue}
+\lstset{
+  language=c, 
+%  backgroundcolor=\color{gray!3},  
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  breakatwhitespace=false,      
+  breaklines=true,                
+  captionpos=b,                    
+  commentstyle=\color{mygreen}, 
+  extendedchars=true,              
+%  frame=single,                   
+  keepspaces=true,             
+  keywordstyle=\color{blue},                      
+  numbers=none,                
+  numbersep=5pt,                   
+  numberstyle=\tiny\color{black}, 
+  rulecolor=\color{mygray},        
+  showspaces=false,               
+  showtabs=false,                 
+  stepnumber=5,                  
+  stringstyle=\color{mymauve},    
+  tabsize=4,                      
+  title=\lstname                
+}
 
 % 汉风图纹	
 \RequirePackage{pgfornament-han}
 \RequirePackage{pgfornament}
-\ctexset{section={name={\S,}}}
+\ctexset{section={name={,}}}
 
 
 % 页眉页脚

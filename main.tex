@@ -4,10 +4,8 @@
 \usepackage{xcolor}
 \usepackage{fontspec}
 \usepackage{pythonhighlight}
-\usepackage{listings}
 \usepackage{sourcecodepro}
 \usepackage[framed, numbered]{matlab-prettifier}
-\lstset{language=Matlab}
 
 
 \author{magicwenli}
@@ -47,10 +45,47 @@
 \end{enumerate}
 
 \section{实验代码及结果}
-\subsection{模块的电路图}
-\subsection{分析电路的仿真波形}
-\subsection{实验设计和调试过程}
+
+\subsection{2输入门电路模块的设计}
+\subsubsection{模块的电路图}
+\subsubsection{分析电路的仿真波形}
+\subsubsection{实验设计和调试过程}
+
+\subsection{多个（4个以上）门电路之间的级联}
+\subsubsection{模块的电路图}
+\subsubsection{分析电路的仿真波形}
+\subsubsection{实验设计和调试过程}
 
 \section{调试和心得体会}
+\begin{lstlisting}[language=c]
+#include <sys/types.h>
+#include <stdio.h>
+#include <unistd.h>
+
+int main()
+{
+  pid_t pid,pid1;
+  pid=fork();
+  if (pid<0)
+  {
+    fprintf(stderr,"fork fail");
+    return 1;
+  }
+  else if (pid==0)
+  {
+      pid1=getpid();
+      printf("child:pid=%d",pid);      //A
+      printf("child:pid1=%d",pid1);    //B
+   }
+   else
+   {
+      pid1=getpid();
+      printf("parent:pid=%d",pid);     //C
+      printf("parent:pid1=%d",pid1);   //D
+      wait(NULL);
+   }
+  return 0;
+}
+\end{lstlisting}
 
 \end{document}
