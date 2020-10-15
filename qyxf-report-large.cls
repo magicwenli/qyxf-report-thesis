@@ -108,6 +108,21 @@
   pageanchor=true
 }
    
+% cref
+\RequirePackage{cleveref}
+%%% crefformat settings
+\crefformat{figure}{#2图~#1#3}
+\crefrangeformat{figure}{图~(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{figure}{图~(#2#1#3)}{和~(#2#1#3)}{，(#2#1#3)}{和~(#2#1#3)}
+
+\crefformat{table}{#2表#1#3}
+\crefrangeformat{table}{表(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{table}{表~(#2#1#3)}{和~(#2#1#3)}{，(#2#1#3)}{和~(#2#1#3)}
+
+\crefformat{equation}{#2式~(#1#3)}
+\crefrangeformat{equation}{式~(#3#1#4)\;\~{}\;(#5#2#6)}
+\crefmultiformat{equation}{式~(#2#1#3)}{ 和~(#2#1#3)}{，(#2#1#3)}{ 和~(#2#1#3)}
+   
 % codes
 \usepackage{listings}
 \colorlet{mygray}{black!30}
@@ -126,13 +141,13 @@
 %  frame=single,                   
   keepspaces=true,             
   keywordstyle=\color{blue},                      
-  numbers=none,                
+  numbers=left,                
   numbersep=5pt,                   
-  numberstyle=\tiny\color{black}, 
+  numberstyle=\color{black!45}, 
   rulecolor=\color{mygray},        
   showspaces=false,               
   showtabs=false,                 
-  stepnumber=5,                  
+  stepnumber=1,                  
   stringstyle=\color{mymauve},    
   tabsize=4,                      
   title=\lstname                
